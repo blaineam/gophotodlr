@@ -1,0 +1,8 @@
+download from photo viewer gohpoto page
+
+javascript:(function(){var%20gophotodlimages=document.getElementsByClassName('thumbnail');for(var%20index=0;index<gophotodlimages.length;index++){var%20currentimage=/src\=([^\s]*)\s/.exec(gophotodlimages[index].innerHTML)[1].replace(/"+/g,"").replace(/_s.jpg/,"_o.jpg");var%20newhtml=newhtml+'<img%20src="'+currentimage+'"%20/>';};document.documentElement.innerHTML=newhtml;}());
+
+
+download from go photo album editor
+
+javascript:(function(){var%20gophotodlimages=document.getElementsByClassName('p_thumb');for(var%20index=0;index<gophotodlimages.length;index++){var%20currentimage=gophotodlimages[index].src.replace(/_s.jpg/,"_o.jpg");var%20newhtml=newhtml+'<img%20src="'+currentimage+'"%20/>';};document.documentElement.innerHTML=newhtml;}());
